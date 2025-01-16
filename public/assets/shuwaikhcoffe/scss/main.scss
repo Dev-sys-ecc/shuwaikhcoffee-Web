@@ -1,0 +1,114 @@
+/* 	=========================
+	Template Name 	 : Ombe
+	Author			 : DexignZone
+	Version			 : 1.0
+	Author Portfolio : https://themeforest.net/user/dexignzone/portfolio
+	=========================
+
+	=========================
+	[Table of Contents]
+	=========================
+	==============
+	  SCSS Start
+	==============
+	1. Abstracts
+        1.1 _mixin
+        1.2 _variable
+        1.3 _abstracts
+
+    2. Bootstrap
+        2.1 Here goes all official bootstrap scss files
+
+    3. Global/Base
+        3.1 _fonts
+        3.2 _reset
+        3.3 _shortcode
+
+    4. Layout
+        4.1 footer
+        4.2 header
+			4.2.1 _header-global
+			4.2.1 _header-sidebar
+
+		4.3 theme
+			4.3.1 _settings
+			4.3.1 _theme-color
+			4.3.1 _theme-view
+
+    5. Components
+		5.1 uc
+			5.1.1  _dz-card
+			5.1.2  _dz-icon
+
+        5.2 ui
+			5.2.1	_ui-accordion
+			5.2.2	_ui-action-sheet
+			5.2.4	_ui-alert
+			5.2.5	_ui-avatar
+			5.2.6	_ui-badge
+			5.2.7	_ui-breadcrumb
+			5.2.8	_ui-button
+			5.2.9	_ui-card
+			5.2.10 	_ui-chip
+			5.2.11 	_ui-divider
+			5.2.12 	_ui-dropdown
+			5.2.13 	_ui-form
+			5.2.14 	_ui-lightgallery
+			5.2.15 	_ui-list-group
+			5.2.16 	_ui-media
+			5.2.17 	_ui-modal
+			5.2.18 	_ui-nouislider
+			5.2.19 	_ui-pagination
+			5.2.20 	_ui-popover
+			5.2.21 	_ui-progressbar
+			5.2.22 	_ui-radio
+			5.2.23 	_ui-scrollspy
+			5.2.24 	_ui-spinner
+			5.2.25 	_ui-stepper
+			5.2.26 	_ui-swiper
+			5.2.27 	_ui-switch
+			5.2.28 	_ui-tab
+			5.2.29 	_ui-table
+			5.2.30 	_ui-timeline
+			5.2.31	_ui-toast
+
+    6. Pages
+        6.1  _authentication
+        6.2  _cart
+        6.3  _home
+        6.4  _message
+        6.5  _notification
+        6.6  _payment
+        6.7  _product-detail
+        6.8  _profile
+        6.9  _splashcreen
+        6.10 _welcome
+        6.11 _tracking
+
+	7. PreLoader
+
+	==============
+	  SCSS End
+	==============
+========================= */
+
+/*==== 1. Abstracts ====*/
+@import "abstracts/abstracts";
+
+/*==== 3. Bootstrap ====*/
+@import "../vendor/bootstrap/scss/bootstrap";
+
+/*==== 4. Global/Base ====*/
+@import "base/base";
+
+/*==== 5. Layout ====*/
+@import "layout/layout";
+
+/*==== 6. Components ====*/
+@import "components/components";
+
+/*==== 7. Pages ====*/
+@import "pages/pages";
+
+/*==== 8. PreLoader ====*/
+@import "preloader";

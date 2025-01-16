@@ -1,0 +1,48 @@
+{
+    "name": "hesabe/payment",
+    "description": "Hesabe Payment Package allows you to use the Payment API to accept payments in Kuwait",
+    "license": "MIT",
+    "keywords": [
+        "Hesabe",
+        "Payment"
+    ],
+    "authors": [
+        {
+            "name": "Fahad Khan",
+            "email": "fkhan@hesabe.com",
+            "homepage": "https://hesabe.com",
+            "role": "Payment API"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "ext-openssl": "*",
+        "ext-json": "*",
+        "ext-curl": "*"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-master",
+        "phpunit/phpunit": "4.*",
+        "symfony/var-dumper": "2.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Hesabe\\Payment\\": "src",
+            "Hesabe\\Library\\": "src/library"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Hesabe\\Payment\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "minimum-stability": "stable"
+}

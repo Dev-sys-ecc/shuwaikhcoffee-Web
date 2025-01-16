@@ -1,0 +1,319 @@
+.payment-card-swiper{
+    margin: 0 -15px;
+    padding: 0 15px 40px;
+}
+
+.payment-card{
+	width: 100%;
+    border-radius: 18px;
+    background: linear-gradient(102deg, #000 2.98%, #242424 100%);
+    box-shadow: 0px 10px 10px 0px var(--rgba-primary-1);
+	overflow: hidden;
+	padding: 15px;
+    &.style-2{
+        margin-bottom: 20px;
+        .card-info{
+            margin-bottom: 40px;
+        }
+        .card-number{
+            margin-bottom: 30px;
+            letter-spacing: 3px;
+        }
+    }
+    &.bg-2{
+        background: #515151;
+    }
+    .card-content{
+        display: flex;
+        flex-direction: column;
+    }
+    .card-info{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 25px;
+        .card-title{
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 1.2px;
+            margin-bottom: 0;
+            color: #fff;
+            display: flex;
+            align-items: center;
+        }
+        .activity{
+           display: inline-block;
+           margin-right: 8px;
+        }
+    }
+    .card-number{
+        color: #FFF;
+        font-weight: 500;
+        letter-spacing: 1.8px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+    .bottom-info{
+        display: flex;
+        align-items: end;
+        .holder-name{
+            color: #fff;
+            text-transform: uppercase;
+            margin-bottom: 0;
+            font-size: 14px;
+            flex: 1;
+            font-weight: 500;
+        }
+        .card-about{
+            color: #fff;
+            span{
+                display: block;
+            }
+            small{
+                display: block;
+                opacity: 0.5;
+            }
+        }
+    }
+}
+
+// Payment Style Start ===
+// Search ===
+.search-input{
+	margin-bottom: 0;
+	align-items: center;
+	.search-icon{
+		font-size: 22px;
+	}
+	.form-control{
+		background-color: transparent;
+		border: 0;
+	}
+}
+
+
+.add-bank{
+	.offcanvas-header{
+		padding: 5px 15px;
+	}
+	.offcanvas-body{
+		background-color: var(--body-bg);
+	}
+	.card{
+		.card-body{
+			.media{
+				margin: 15px auto;
+			}
+		}
+	}
+}
+
+.item-list{
+	display: table;
+	.list{
+		padding: 6px 0;
+		width: 50%;
+		float: left;
+		a{
+			font-size: 12px;
+			font-weight: 400;
+			color: var(--title);
+		}
+	}
+}
+// Payment Style End ===
+
+// Review Area ===
+.write-reviews-box{
+    padding: 30px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    .rating-content{
+        text-align: center;
+        .title{
+            margin-bottom: 10px;
+        }
+        .dz-text{
+            margin-bottom: 0;
+            font-size: 14px;
+            color: var(--dark);
+        }
+    } 
+    .rating-info{
+        text-align: center;
+        .rating-text{
+            font-size: 50px;
+            margin-bottom: 10px;
+            color: #384144;
+        }
+    }
+    .dz-star-rating{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        li{
+            svg{
+                width: 32px;
+                height: 32px;
+                path{
+                    stroke: #E9E9E9;
+                    fill: #E9E9E9;  
+                }
+            } 
+            &.active{
+                svg{
+                    path{
+                        stroke: #FFB444;
+                        fill: #FFB444;  
+                    }
+                }
+            }
+        }
+    }
+    textarea{
+        height: 108px;
+        border-radius: var(--border-radius-xl);
+        box-shadow: 0px 4px 14px 0px rgba(48, 159, 95, 0.12);
+        border-width: 2px;
+        padding: 15px;
+        &::placeholder{
+            color: #AFAFAF;
+        }
+    }
+}
+
+// Reward ===
+.rewards-box{
+    background-color: var(--primary);
+    padding: 25px 30px;
+    border-radius: var(--border-radius-lg);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+	margin-bottom: 30px;
+	.sub-title{
+		margin: 0 0 10px;
+		color: #fff;
+		font-weight: 500;
+	}
+	.title{
+		color: #fff;
+		font-size: 34px;
+		margin: 0;
+	}
+	.redeem-btn{
+		background-color: rgba(255,255,255,0.17);
+		padding: 12px 18px;
+		border-radius: var(--border-radius-sm);
+		height: auto;
+        color: #FFF;
+        font-weight: 500;
+		font-size: 14px;
+		line-height: 14px;
+		margin-top: 25px;
+	}
+	&:before,
+	&:after{
+		content: "";
+		position: absolute;
+		width: 270px;
+		height: 270px;
+		z-index: -1;
+		border-radius: 50%;
+	}
+	&:before{
+		left: -140px;
+		bottom: -125px;
+		background: -moz-linear-gradient(bottom,  rgba(0,0,0,0.01) 0%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(bottom,  rgba(0,0,0,0.01) 0%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to top,  rgba(0,0,0,0.01) 0%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		opacity: 0.1;
+	}
+	&:after{
+		right: -140px;
+		top: -125px;
+		background: rgb(0,120,98); /* Old browsers */
+		background: -moz-linear-gradient(top,  rgba(0,120,98,1) 20%, rgba(29,207,143,1) 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top,  rgba(0,120,98,1) 20%,rgba(29,207,143,1) 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom,  rgba(0,120,98,1) 20%,rgba(29,207,143,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		opacity: 0.9;
+		transform: rotate(130deg);
+	}
+	.bg-icon{
+	    position: absolute;
+		right: -20px;
+		bottom: -20px;
+	}
+	.icon-bx{
+		float: right;
+        i{
+            font-size: 24px;
+            color: rgba(255,255,255,0.50);
+        }
+	}
+}
+
+
+// Rewards List
+.rewards-list{
+	& > ul{
+		padding: 0;
+		margin: 0;
+		& > li{
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+            justify-content: space-between;
+            padding: 15px;
+            margin: 0 -15px;
+	
+			.title{
+			    margin: 0 0 15px;
+				font-weight: 500;
+                line-height: 24px;
+			}
+			.pts-bx{
+				text-align: right;
+				margin-left: 50px;
+				.points{
+					margin: 0 0 10px;
+				}
+				p{
+					margin: 0;
+				}
+			}
+		}
+	}
+    .dz-meta{
+		ul{
+			padding: 0;
+			margin: 0;
+			li{
+				display: inline-block;
+				font-size: 12px;
+				color: var(--primary);
+				padding-right: 10px;
+				margin-right: 10px;
+				font-weight: 500;
+                position: relative;
+	
+				&:after{
+					content: "|";
+					right: -3px;
+					position: absolute;
+					color: inherit;
+				}
+				&:last-child{
+					padding-right: 0;
+					margin-right: 0;
+					&:after{
+						content: none;
+					}
+				}
+			}
+		}
+	}
+}

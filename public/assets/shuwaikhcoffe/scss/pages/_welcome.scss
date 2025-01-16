@@ -1,0 +1,141 @@
+.welcome-area {
+	position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 600px;
+    height: 100%;
+    margin: auto;
+	.bg-shape{
+		img{
+			position: absolute;
+			width: 180px;
+		}
+		.vector-1{
+			bottom: 0;
+			left: 0;
+		}
+		.vector-2{
+			top: 0;
+			right: 0;
+		}
+	}
+	.welcome-inner-2{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		padding: 40px 15px 60px;
+		position: relative;
+		&::after{
+			content: "";
+			bottom: 0;
+			left: 0;
+			position: absolute;
+			width: 100%;
+			opacity: 0.3;
+			background: linear-gradient(180deg, rgba(4, 118, 78, 0.00) 0%, #04764E 100%);
+			z-index: -1;
+			height: 460px;
+		}
+		.main-wrapper{
+			display: flex;
+			width: 100%;
+			align-items: center;
+			height: 100%;
+			justify-content: center;
+			.main-logo{
+				text-align: center;
+				.logo-icon{
+					width: 300px;
+					margin: 0 auto;
+				}
+				.logo-name{
+					font-size: 38px;
+					margin-bottom: 14px;
+				}
+				.logo-text{
+					margin-bottom: 0;
+					color: rgba(12, 12, 12, 0.70);
+					font-family: 'Raleway', sans-serif;
+					font-weight: 500;
+					letter-spacing: 0.5px;
+				}
+			} 
+		}
+		.dz-button-group{
+			text-align: center;
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			gap: 15px;
+			width: calc(100% - 30px);
+			.title{
+				margin-bottom: 40px;
+			}
+		}
+	}
+}
+
+.get-started{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	height: 100%;
+	padding-bottom: 100px;
+	.swiper-wrapper{
+		.swiper-slide{
+			opacity: 0 !important;
+			&.swiper-slide-active{
+				opacity: 1!important;
+			}
+		}
+	}
+	.slide-info{
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding-bottom: 20px;
+		z-index: 1;
+		position: relative;
+		.dz-title{
+			margin-bottom: 20px;
+		}
+		p{
+			margin-bottom: 0;
+			color: #1b1b1b;
+			line-height: 22px;
+		}
+		.dz-media{
+			margin: auto;
+			width: 235px;
+			img{
+				width: 100%;
+			}
+		}
+		.slide-content{
+			z-index: 1;
+			position: relative;
+			padding: 0 15px;
+			max-width: 350px;
+			margin: 0 auto 0;
+			text-align: center;
+		}
+	}
+}
+
+.bottom-btn{
+	position: fixed;
+    bottom: 0;
+    width: calc(100% - 60px);
+    left: 50%;
+    z-index: 9;
+    transform: translateX(-50%);
+    max-width: 600px;
+    padding-bottom: 25px;
+}
+
+
+/* +++++++++++++++ */

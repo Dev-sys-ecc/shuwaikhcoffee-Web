@@ -1,0 +1,60 @@
+{
+  "name": "adedaramola/laravel-sendchamp",
+  "description": "A Laravel package to work with sendchamp API",
+  "keywords": [
+    "sendchamp",
+    "laravel-sendchamp",
+    "php",
+    "sendchamp-sdk",
+    "sdk"
+  ],
+  "type": "library",
+  "homepage": "https://github.com/Adedaramola/laravel-sendchamp",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Adedaramola\\Sendchamp\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Adedaramola\\Sendchamp\\Tests\\": "tests/"
+    }
+  },
+  "authors": [
+    {
+      "role": "Developer",
+      "name": "Adedaramola",
+      "email": "mailstokindle@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^8.0",
+    "illuminate/contracts": "^9.26"
+  },
+  "require-dev": {
+    "guzzlehttp/guzzle": "^7.5",
+    "orchestra/testbench": "^7.7",
+    "pestphp/pest": "^1.21"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Adedaramola\\Sendchamp\\Providers\\SendchampServiceProvider"
+      ],
+      "aliases": {
+        "Sendchamp": "Adedaramola\\Sendchamp\\Facades\\Sendchamp"
+      }
+    }
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "sort-packages": true,
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script>
+        // Ignore this in your implementation
+        window.isMbscDemo = true;
+    </script>
+
+    <title>
+        Remove/Undo
+    </title>
+
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+
+    <!-- Mobiscroll JS and CSS Includes -->
+    <link rel="stylesheet" href="css/mobiscroll.jquery.min.css">
+    <script src="js/mobiscroll.jquery.min.js"></script>
+
+    <style type="text/css">
+            body {
+        margin: 0;
+        padding: 0;
+    }
+
+    body,
+    html {
+        height: 100%;
+    }
+
+            .md-mailbox .mbsc-lv-item {
+        line-height: 20px;
+        padding: 10px 10px 10px 60px;
+    }
+    
+    .md-mail-icon {
+        width: 40px;
+        line-height: 40px;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        color: #fff;
+        text-align: center;
+        text-shadow: none;
+    }
+    
+    .md-mail-date {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 12px;
+    }
+    
+    .md-mail-from {
+        font-size: 14px;
+    }
+    
+    .md-mail-subject {
+        font-size: 12px;
+    }
+    
+    .md-mail-empty {
+        padding: 10px;
+    }
+    </style>
+
+</head>
+
+<body>
+
+    <div mbsc-page class="demo-remove-undo">
+        <div style="height:100%">
+                <div class="mbsc-note mbsc-note-primary mbsc-align-center">
+        Swipe left or right to remove items.
+    </div>
+    
+    <ul id="demo-remove-undo" class="md-mailbox mbsc-cloak">
+        <li>
+            <div class="md-mail-icon" style="background:#4c66a4;">F</div>
+            <div class="md-mail-date">Nov 4</div>
+            <div class="md-mail-from">Facebook</div>
+            <div class="md-mail-subject">Your weekly page update</div>
+        </li>
+        <li>
+            <div class="md-mail-icon" style="background:#287BBC;">L</div>
+            <div class="md-mail-date">Nov 1</div>
+            <div class="md-mail-from">LinkedIn</div>
+            <div class="md-mail-subject">Michael has endorsed you!</div>
+        </li>
+        <li>
+            <div class="md-mail-icon" style="background:#5185a8;">M</div>
+            <div class="md-mail-date">Oct 31</div>
+            <div class="md-mail-from">Mobiscroll</div>
+            <div class="md-mail-subject">October update</div>
+        </li>
+        <li>
+            <div class="md-mail-icon" style="background:#1a3665;">P</div>
+            <div class="md-mail-date">Oct 31</div>
+            <div class="md-mail-from">PayPal</div>
+            <div class="md-mail-subject"> Stay fashionable in the cold with PayPal</div>
+        </li>
+        <li>
+            <div class="md-mail-icon" style="background:#dd4b39;">G</div>
+            <div class="md-mail-date">Oct 28</div>
+            <div class="md-mail-from">Google+</div>
+            <div class="md-mail-subject">John Doe added you back on Google+</div>
+        </li>
+        <li>
+            <div class="md-mail-icon" style="background:#5185a8;">M</div>
+            <div class="md-mail-date">Oct 27</div>
+            <div class="md-mail-from">Mobiscroll</div>
+            <div class="md-mail-subject">Password reset information</div>
+        </li>
+    </ul>
+        </div>
+    </div>
+
+    <script>
+            mobiscroll.settings = {
+        theme: 'ios',
+        themeVariant: 'light',
+        lang: 'en'
+    };
+
+            $(function () {
+    
+        // Mobiscroll Listview initialization
+        $('#demo-remove-undo').mobiscroll().listview({
+            theme: 'ios',           // Specify theme like: theme: 'ios' or omit setting to use default
+            themeVariant: 'light',  // More info about themeVariant: https://docs.mobiscroll.com/4-10-10/listview#opt-themeVariant
+            lang: 'en',             // Specify language like: lang: 'pl' or omit setting to use default
+            stages: [{              // More info about stages: https://docs.mobiscroll.com/4-10-10/listview#opt-stages
+                percent: -30,
+                action: remove,
+                undo: true          // More info about undo: https://docs.mobiscroll.com/4-10-10/listview#methods-undo
+            }, {
+                percent: 30,
+                action: remove,
+                undo: true          // More info about undo: https://docs.mobiscroll.com/4-10-10/listview#methods-undo
+            }]
+        });
+    
+        function remove(ev, inst) {
+            inst.remove(ev.target);
+            return false;
+        }
+    
+    });
+    </script>
+
+</body>
+
+</html>
